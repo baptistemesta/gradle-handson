@@ -1,0 +1,13 @@
+def hello = task 'hello' {
+    doFirst {
+        print "hello "
+    }
+}
+
+def world = task 'world' {
+    doFirst {
+        println "world"
+    }
+}
+
+world.dependsOn hello

@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+group = 'com.acme.myproject' // project group
+version = '1.0.0-SNAPSHOT' // project version
+//name is by default the name of the folder
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'commons-codec:commons-codec:1.10'
+    testCompile 'junit:junit:4.12'
+}
+
