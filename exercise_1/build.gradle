@@ -1,12 +1,17 @@
 //TODO 1: apply the java plugin to compile the library
+apply plugin: 'java'
 //TODO 2: apply the groovy plugin to run tests written in groovy
+apply plugin: 'groovy'
 //TODO 4: apply the application plugin to let gradle create a standalone application
+apply plugin: 'application'
 //TODO 5: apply the maven-publish plugin to publish our library
+apply plugin: 'maven-publish'
 
 group = 'com.bonitasoft.handson'
 version = '1.0.1-SNAPSHOT'
 
 //TODO 4: specify what is the main class using `mainClassName=`
+mainClassName = 'Main'
 
 repositories {
     jcenter()
@@ -21,3 +26,16 @@ dependencies {
 }
 
 //TODO 5: add a maven java publication: see https://docs.gradle.org/current/userguide/publishing_maven.html
+publishing {
+    repositories {
+        maven {
+            name 'bonitaInternal'
+            url 'http://repositories.rd.lan/maven/snapshots/'
+        }
+    }
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}

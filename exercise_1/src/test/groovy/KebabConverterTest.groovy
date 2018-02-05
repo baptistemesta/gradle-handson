@@ -10,7 +10,6 @@ class KebabConverterTest extends Specification {
         def converted = kebabConverter.convertToKebabCase("the_input_in_snake")
 
         then:
-        //TODO: 3: fix the test
-        converted == "the-input-in_snake"
+        converted == "the-input-in-snake"
     }
 }
