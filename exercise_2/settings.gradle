@@ -10,3 +10,4 @@ rootProject.name = 'bonita-custom-extension'
 
 include 'custom-lib'
 include 'rest-api-extension'
+include 'custom-page'

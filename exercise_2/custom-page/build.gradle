@@ -1,0 +1,18 @@
+apply plugin: 'distribution'
+
+distributions {
+    main {
+        contents {
+            from('src/main/resources')
+            into '/'
+        }
+    }
+}
+
+deployPage.dependsOn distZip
+
+bonitaArtifacts {
+    application = file('src/main/resources/application.xml')
+    profiles = file('src/main/resources/profile.xml')
+    page = distZip
+}

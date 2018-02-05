@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="la-pokehunt" version="1.0" profile="PokemonHunter" homePage="index" state="ACTIVATED" layout="custompage_defaultlayout" theme="custompage_bootstrapdefaulttheme">
+        <displayName>ICI Configuration</displayName>
+        <description>This is the LA to configure Add-on Intelligent Continuous Improvement</description>
+        <applicationPages>
+            <applicationPage customPage="custompage_pokehunt" token="index"/>
+        </applicationPages>
+        <applicationMenus/>
+    </application>
+</applications>
