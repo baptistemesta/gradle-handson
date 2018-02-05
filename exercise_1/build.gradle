@@ -1,0 +1,23 @@
+//TODO 1: apply the java plugin to compile the library
+//TODO 2: apply the groovy plugin to run tests written in groovy
+//TODO 4: apply the application plugin to let gradle create a standalone application
+//TODO 5: apply the maven-publish plugin to publish our library
+
+group = 'com.bonitasoft.handson'
+version = '1.0.1-SNAPSHOT'
+
+//TODO 4: specify what is the main class using `mainClassName=`
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'ch.qos.logback:logback-classic:1.2.3'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.codehaus.groovy:groovy-all:2.4.9'
+    testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
+}
+
+//TODO 5: add a maven java publication: see https://docs.gradle.org/current/userguide/publishing_maven.html

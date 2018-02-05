@@ -136,7 +136,7 @@ Spotless, axion-release, docker, node, ...
 
 follow the [README.md](exercise_1/README.md) in `exercise_1/`
 
-###### solution on the branch solution
+###### solution on the branch solution_1
 
 ---
 # **Let's code** :metal:
@@ -145,7 +145,7 @@ follow the [README.md](exercise_1/README.md) in `exercise_1/`
 
 follow the [README.md](exercise_2/README.md) in `exercise_2/`
 
-###### solution on the branch solution
+###### solution on the branch solution_2
 ---
 # Advanced concepts
 ## Task inputs/outputs
