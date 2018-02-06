@@ -1,0 +1,7 @@
+plugins { id "org.jetbrains.kotlin.jvm" version "1.2.21" }
+
+dependencies {
+    compile 'com.github.javafaker:javafaker:0.14'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.21"
+    testCompile 'junit:junit:4.12'
+}

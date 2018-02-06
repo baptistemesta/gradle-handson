@@ -1,0 +1,12 @@
+//required to get plugins from repositories.rd.lan
+pluginManagement {
+    repositories {
+        maven { url 'http://repositories.rd.lan/maven/releases/' }
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'bonita-custom-extension'
+
+include 'custom-lib'
+include 'rest-api-extension'

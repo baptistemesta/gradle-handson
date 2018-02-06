@@ -153,6 +153,23 @@ follow the [README.md](exercise_1/README.md) in `exercise_1/`
 ###### solution on the branch solution_1
 
 ---
+# **Let's code** :metal:
+
+## Bonita REST API extension and page
+
+follow the [README.md](exercise_2/README.md) in `exercise_2/`
+
+###### solution on the branch solution_2
+
+---
+# **Let's code** :metal:
+
+## Plugin development
+
+follow the [README.md](exercise_3/README.md) in `exercise_3/`
+
+###### solution on the branch solution_3
+---
 # Advanced concepts
 ## Task inputs/outputs
 
@@ -226,21 +243,4 @@ settings.gradle
 
 Work just like `UP-TO-DATE` checking but can get directly a compiled jar from the network if someone compiled it already using the same set of classes in input.
 
----
-# **Let's code** :metal:
 
-## Bonita REST API extension and page
-
-follow the [README.md](exercise_2/README.md) in `exercise_2/`
-
-###### solution on the branch solution_2
-
----
-# **Let's code** :metal:
-
-## Plugin development
-
-checkout branch `exercise_3`
-follow the [README.md](exercise_3/README.md) in `exercise_3/`
-
-###### solution on the branch solution_3
