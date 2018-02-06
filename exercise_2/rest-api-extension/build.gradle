@@ -1,0 +1,31 @@
+apply plugin: 'groovy'
+apply plugin: 'distribution'
+
+
+dependencies {
+    compile project(":custom-lib")
+
+    //will not bundle these dependencies
+    compileOnly "com.bonitasoft.web:bonita-web-extensions-sp:7.6.2"
+    compileOnly 'org.codehaus.groovy:groovy-all:2.4.4'
+    compileOnly 'org.slf4j:slf4j-api:1.6.1'
+}
+
+//construct the rest api extension zip
+distributions {
+    main {
+        contents {
+            from('src/main/groovy') { include 'com/bonitasoft/customext/restapi/Index.groovy' }
+            from('src/main/resources')
+            from(jar) { into 'lib' }
+            from(project.configurations.runtimeClasspath) { into 'lib' }
+            into '/'
+        }
+    }
+}
+
+//when we call deployRestApiExtension, we need to have the zip built
+deployRestApiExtension.dependsOn distZip
+
+//specify that the rest api extension is the distZip
+bonitaArtifacts { restApiExtension = distZip }

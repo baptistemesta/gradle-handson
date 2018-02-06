@@ -1,0 +1,24 @@
+// depends on plugin from plugin portal or custom repository (see settings.gradle)
+plugins {
+    id "com.avast.gradle.docker-compose" version "0.6.8"
+    id 'com.bonitasoft.deployer.bonita-resources-deployer' version '0.1.18'
+    id 'com.bonitasoft.gradle.bonita-base-plugin' version '0.1.15'
+}
+
+
+group 'com.bonitasoft.customext'
+version '1.0.0'
+
+//apply to all sub projects
+subprojects {
+    apply plugin: 'com.bonitasoft.deployer.bonita-resources-deployer'
+
+    repositories {
+        maven { url 'http://repositories.rd.lan/maven/releases/' }
+        jcenter()
+    }
+
+    //this tells `bonita-resource-deployer` where is bonita.
+    //see https://github.com/bonitasoft/bonita-resources-deployer/#gradle-plugin
+    bonitaConfiguration { targetUrl = "http://localhost:8080/bonita/" }
+}
